@@ -1,9 +1,8 @@
 <?php
-$DATABASE_URL = parse_url('postgres://sazcioretredhy:e681d6564ef7f958b61b197f97d24f2391e21f5c6d6fbc0c24fc4da1ef6f58ea@ec2-35-174-118-71.compute-1.amazonaws.com:5432/d4hk7e1emfmd2k');
-$DATABASE_PASS = "e681d6564ef7f958b61b197f97d24f2391e21f5c6d6fbc0c24fc4da1ef6f58ea";
-$DATABASE_USER = "sazcioretredhy";
-$DATABASE_HOST = "ec2-35-174-118-71.compute-1.amazonaws.com";
-$DATABASE_PORT = 5432;
+
+use Illuminate\Support\Str;
+$DATABASE_URL = parse_url('postgres://fgyusbqcrscuko:bd19c5fb6d3d6214755c0647d0d7d7a790eb661d98314ec9278b8d0bc54db86e@ec2-35-174-118-71.compute-1.amazonaws.com:5432/d2frquesdj5ln9');
+
 
 return [
 
@@ -61,11 +60,12 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => $DATABASE_HOST,
-            'port' => $DATABASE_PORT,
+            'url' => env('postgres://fgyusbqcrscuko:bd19c5fb6d3d6214755c0647d0d7d7a790eb661d98314ec9278b8d0bc54db86e@ec2-35-174-118-71.compute-1.amazonaws.com:5432/d2frquesdj5ln9'),
+            'host' => $DATABASE_URL['host'],
+            'port' => $DATABASE_URL['port'],
             'database' => ltrim($DATABASE_URL["path"],"/"),
-            'username' => $DATABASE_USER,
-            'password' => $DATABASE_PASS,
+            'username' => $DATABASE_URL['user'],
+            'password' => $DATABASE_URL['pass'],
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
