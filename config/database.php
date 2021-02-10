@@ -1,8 +1,8 @@
 <?php
-$DATABASE_URL = parse_url('postgres://uuveasdwjvnogk:170f7e5ddf6d32dd71fe0257f4c7384e0dcaafc21552e84f6d485260c6ca80f2@ec2-100-24-139-146.compute-1.amazonaws.com:5432/d530g1abd4q3b');
-$DATABASE_PASS = "170f7e5ddf6d32dd71fe0257f4c7384e0dcaafc21552e84f6d485260c6ca80f2";
-$DATABASE_USER = "uuveasdwjvnogk";
-$DATABASE_HOST = "ec2-100-24-139-146.compute-1.amazonaws.com";
+$DATABASE_URL = parse_url('postgres://sazcioretredhy:e681d6564ef7f958b61b197f97d24f2391e21f5c6d6fbc0c24fc4da1ef6f58ea@ec2-35-174-118-71.compute-1.amazonaws.com:5432/d4hk7e1emfmd2k');
+$DATABASE_PASS = "e681d6564ef7f958b61b197f97d24f2391e21f5c6d6fbc0c24fc4da1ef6f58ea";
+$DATABASE_USER = "sazcioretredhy";
+$DATABASE_HOST = "ec2-35-174-118-71.compute-1.amazonaws.com";
 $DATABASE_PORT = 5432;
 
 return [
