@@ -1,5 +1,10 @@
 <?php
 $DATABASE_URL = parse_url('postgres://uuveasdwjvnogk:170f7e5ddf6d32dd71fe0257f4c7384e0dcaafc21552e84f6d485260c6ca80f2@ec2-100-24-139-146.compute-1.amazonaws.com:5432/d530g1abd4q3b');
+$DATABASE_PASS = "170f7e5ddf6d32dd71fe0257f4c7384e0dcaafc21552e84f6d485260c6ca80f2";
+$DATABASE_USER = "uuveasdwjvnogk";
+$DATABASE_HOST = "ec2-100-24-139-146.compute-1.amazonaws.com";
+$DATABASE_PORT = 5432;
+
 return [
 
     /*
@@ -56,11 +61,11 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => $DATABASE_URL["host"],
-            'port' => $DATABASE_URL["port"],
+            'host' => $DATABASE_HOST,
+            'port' => $DATABASE_PORT,
             'database' => ltrim($DATABASE_URL["path"],"/"),
-            'username' => $DATABASE_URL["user"],
-            'password' => $DATABASE_URL["pass"],
+            'username' => $DATABASE_USER,
+            'password' => $DATABASE_PASS,
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
